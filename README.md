@@ -52,6 +52,48 @@ Key steps:
 - Receiver processing and equalisation
 - BER calculation
 
+% Author: Swati Clarice Xalxo
+% Project: Wireless Communication System Analysis
+% Description: BER vs SNR for BPSK over AWGN channel (validated)
+
+clear; clc;
+
+% Parameters
+n = 1e5; % number of bits (reduced for speed)
+snr_db = 0:2:20;
+ber = zeros(length(snr_db),1);
+
+% Generate bits
+data = randi([0 1], n, 1);
+
+% BPSK modulation (0 -> -1, 1 -> +1)
+mod_data = 2*data - 1;
+
+for i = 1:length(snr_db)
+
+    snr_linear = 10^(snr_db(i)/10);
+
+    % Correct noise scaling
+    noise = randn(n,1) / sqrt(2*snr_linear);
+
+    % Received signal
+    rx = mod_data + noise;
+
+    % Detection
+    demod = rx > 0;
+
+    % BER calculation
+    ber(i) = sum(data ~= demod) / n;
+end
+
+% Plot
+figure;
+semilogy(snr_db, ber, 'o-');
+xlabel('SNR (dB)');
+ylabel('BER');
+title('BER vs SNR for BPSK over AWGN');
+grid on;
+
 ---
 
 ## 📊 Results & Analysis
