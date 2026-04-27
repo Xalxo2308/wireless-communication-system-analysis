@@ -1,9 +1,5 @@
 # Wireless Communication System Analysis (MIMO-OFDMA)
 
-% NOTE:
-% The BER trend observed in this simulation does not follow the expected theoretical decrease with SNR.
-% This suggests potential issues in noise modelling or system configuration, which were analysed as part of the project.
-
 A simulation-based project analysing the performance of a MIMO-OFDMA downlink communication system using MATLAB.
 
 ---
