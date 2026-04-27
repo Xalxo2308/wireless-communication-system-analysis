@@ -52,6 +52,12 @@ Key steps:
 - Receiver processing and equalisation
 - BER calculation
 
+theoretical = qfunc(sqrt(2*10.^(snr_db/10)));
+
+hold on;
+semilogy(snr_db, theoretical, '--');
+legend('Simulated BER','Theoretical BER');
+
 % Author: Swati Clarice Xalxo
 % Project: Wireless Communication System Analysis
 % Description: BER vs SNR for BPSK over AWGN channel (validated)
