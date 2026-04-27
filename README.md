@@ -115,6 +115,9 @@ This observation was further analysed to understand how modelling assumptions an
 
 This reflects real-world engineering scenarios where simulation outputs must be critically evaluated rather than assumed to be correct.
 
+The simulated BER closely follows the expected theoretical trend, where BER decreases exponentially with increasing SNR, validating the correctness of the communication system model.
+
+The results are consistent with theoretical BER expressions for BPSK over AWGN channels.
 ---
 
 ## 👤 My Contribution
@@ -136,7 +139,9 @@ This reflects real-world engineering scenarios where simulation outputs must be 
 
 ## 🌍 Real-World Application
 
-This project reflects real-world wireless communication challenges in systems such as 4G/5G networks, where performance optimisation is critical for reliability and efficiency.
+This project reflects real-world wireless communication challenges in systems such as 4G/5G networks, where performance optimisation is critical for reliability and efficiency. 
+
+This type of analysis is critical in real-world systems such as satellite and 5G communication, where signal reliability directly impacts system performance.
 
 ---
 
