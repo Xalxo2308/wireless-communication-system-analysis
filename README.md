@@ -1,5 +1,9 @@
 # Wireless Communication System Analysis (MIMO-OFDMA)
 
+% NOTE:
+% The BER trend observed in this simulation does not follow the expected theoretical decrease with SNR.
+% This suggests potential issues in noise modelling or system configuration, which were analysed as part of the project.
+
 A simulation-based project analysing the performance of a MIMO-OFDMA downlink communication system using MATLAB.
 
 ---
@@ -10,6 +14,14 @@ This project focuses on modelling and analysing a wireless communication system 
 
 ---
 
+## 🛠 Tools & Methods
+
+- MATLAB simulation
+- BPSK modulation
+- AWGN channel modelling
+- BER vs SNR analysis
+- Performance evaluation
+  
 ## 🚨 Problem Statement
 
 Wireless communication systems are affected by:
@@ -46,13 +58,18 @@ Key steps:
 
 ---
 
-## 📊 Results
+## 📊 Results & Analysis
 
-- BER was analysed across SNR values from 15 dB to 40 dB
-- Observed irregular BER behaviour at higher SNR levels
-- Identified potential causes such as:
-  - equalisation limitations
-  - noise modelling inconsistencies
+The BER vs SNR analysis showed unexpected behaviour, where the BER remained approximately constant instead of decreasing with increasing SNR.
+
+This indicates potential limitations or issues in the simulation model, such as:
+- incorrect noise scaling
+- limitations in equalisation approach
+- implementation-level inconsistencies
+
+This observation was further analysed to understand how modelling assumptions and system design impact communication performance.
+
+This reflects real-world engineering scenarios where simulation outputs must be critically evaluated rather than assumed to be correct.
 
 ---
 
